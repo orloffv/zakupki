@@ -19,3 +19,6 @@
 [submodule "framework/modules/cache"]
 	path = framework/modules/cache
 	url = git://github.com/kohana/cache.git
+[submodule "framework/modules/message"]
+	path = framework/modules/message
+	url = git://github.com/GeertDD/kohana-message.git

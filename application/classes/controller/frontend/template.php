@@ -99,7 +99,7 @@ class Controller_Frontend_Template extends Controller_Template {
             throw new HTTP_Exception_404;
         }
 
-        //View::set_global('message', Message::render('frontend'));
+        View::set_global('message', Message::render('frontend'));
 
         // parent'a не надо вызывать!
     }

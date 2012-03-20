@@ -130,6 +130,7 @@ $default_modules = array(
     'database'     => MODPATH.'database',
     'jelly'        => MODPATH.'jelly',
     'pagination'   => MODPATH.'pagination',
+    'message'      => MODPATH.'message',
 );
 
 $modules = (Kohana::$environment === Kohana::PRODUCTION) ?
