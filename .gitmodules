@@ -1,0 +1,21 @@
+[submodule "framework/core"]
+	path = framework/core
+	url = git://github.com/kohana/core.git
+[submodule "framework/modules/database"]
+	path = framework/modules/database
+	url = git://github.com/kohana/database.git
+[submodule "framework/modules/pagination"]
+	path = framework/modules/pagination
+	url = git://github.com/kohana/pagination.git
+[submodule "framework/modules/jelly"]
+	path = framework/modules/jelly
+	url = git://github.com/creatoro/jelly.git
+[submodule "public_html/static/assets/vendor/bootstrap"]
+	path = public_html/static/assets/vendor/bootstrap
+	url = git://github.com/twitter/bootstrap.git
+[submodule "public_html/static/assets/vendor/datatables"]
+	path = public_html/static/assets/vendor/datatables
+	url = git://github.com/DataTables/DataTables.git
+[submodule "framework/modules/cache"]
+	path = framework/modules/cache
+	url = git://github.com/kohana/cache.git
