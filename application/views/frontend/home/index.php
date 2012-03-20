@@ -4,7 +4,7 @@
         <th>Тип</th>
         <th>Цена</th>
         <th>Дата</th>
-        <th>Заказчик</th>
+        <th style="width:310px;">Заказчик</th>
     </tr>
     <?php foreach($items as $item):?>
         <tr>
@@ -16,7 +16,7 @@
             <td><?=__($item->type)?></td>
             <td><?=number_format($item->price)?></td>
             <td><?=date('d.m.y H:i', $item->date)?></td>
-            <td><?=$item->customer?></td>
+            <td><span title="<?=$item->customer?>"><?=Text::limit_chars($item->customer, 75)?></span></td>
         </tr>
     <?php endforeach;?>
 </table>
