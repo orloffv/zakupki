@@ -1,0 +1,4 @@
+.DS_Store
+.idea/
+application/config/database.php
+application/production.php
