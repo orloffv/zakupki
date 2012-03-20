@@ -150,16 +150,27 @@ elseif (Kohana::$environment === Kohana::DEVELOPMENT)
 
 Cookie::$salt = 'hyper-security';
 
-
-if ( ! Route::cache(FALSE))
+if (Kohana::$is_cli)
 {
-    // > Backend
-    Route::get_backend_route();
-    // < Backend
+    Route::set('cli', '(<controller>(/<action>(/<id>)))')
+        ->defaults(array(
+        'directory' => 'cli',
+        'controller' => 'cron',
+        'action'     => 'ls',
+    ));
+}
+else
+{
+    if ( ! Route::cache(FALSE))
+    {
+        // > Backend
+        Route::get_backend_route();
+        // < Backend
 
-    // > Frontend
-    Route::get_frontend_route();
-    // < Frontend
+        // > Frontend
+        Route::get_frontend_route();
+        // < Frontend
 
-    Route::cache(TRUE, NULL, Cache::$lifetime['route']);
+        Route::cache(TRUE, NULL, Cache::$lifetime['route']);
+    }
 }

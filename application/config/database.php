@@ -21,7 +21,7 @@ return array
             'username'   => 'root',
             'password'   => 'root',
             'persistent' => FALSE,
-            'database'   => 'kohana-cms',
+            'database'   => 'zakupki',
         ),
         'table_prefix' => '',
         'charset'      => 'utf8',

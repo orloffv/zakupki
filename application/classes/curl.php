@@ -116,7 +116,16 @@ class Curl {
         }
         else if ($encoding == 'cp1251' OR $encoding == 'koi8-r')
         {
-            return iconv($encoding, 'utf-8', $html);
+            $html_conv = iconv($encoding, 'utf-8', $html);
+
+            if ( ! strlen($html_conv) && strlen($html))
+            {
+                $html_conv = mb_convert_encoding($html, 'utf-8', $encoding);
+            }
+
+            $html_conv = str_replace('encoding="windows-1251"', 'encoding="utf8"', $html_conv);
+
+            return $html_conv;
         }
 
         return $html;
