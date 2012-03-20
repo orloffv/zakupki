@@ -2,6 +2,11 @@
 
 class Controller_Cli_Cron extends Controller_Cli {
 
+    public function action_zakupki()
+    {
+        Cron_Zakupki::factory()->run();
+    }
+
     public function action_ls()
     {
         echo "All available tasks:\n";
