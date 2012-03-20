@@ -8,11 +8,11 @@
 <body>
 <?=$header?>
 <content>
-    <?=$content?>
+    <div class="container">
+        <?=$content?>
+        <?=$footer?>
+    </div>
 </content>
-
-<?=$footer?>
-
 <?=View::factory('frontend/layout/profiler')?>
 
 </body>
