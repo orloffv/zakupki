@@ -31,8 +31,8 @@ class Jelly_Builder extends Jelly_Core_Builder {
      * @param integer $offset
      * @return array
      */
-    public function paging($limit, $offset)
+    public function paging(Pagination $pagination)
     {
-        return $this->limit($limit)->offset($offset)->execute();
+        return $this->limit($pagination->items_per_page)->offset($pagination->offset)->execute();
     }
 }

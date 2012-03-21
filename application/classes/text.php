@@ -2,7 +2,6 @@
 
 class Text extends Kohana_Text
 {
-
     public static function remove_entities($str)
     {
         if (substr_count($str, '&') && substr_count($str, ';'))
@@ -29,4 +28,26 @@ class Text extends Kohana_Text
         return $str;
     }
 
+    public static function ru_num($num, $word = null, $word1 = null, $word2 = null, $word5 = null, $word0 = null)
+    {
+        if ((int) $num == 0)
+        {
+            return $word0;
+        }
+
+        if ($num % 10 == 1 && $num % 100 != 11 )
+        {
+            $wordEnd = $word1;
+        }
+        else if ($num % 10 >= 2 && $num % 10 <= 4 && ( $num % 100 < 10 || $num % 100 >= 20 ) )
+        {
+            $wordEnd = $word2;
+        }
+        else
+        {
+            $wordEnd = $word5;
+        }
+
+        return $num . ' ' . $word . $wordEnd;
+    }
 }
