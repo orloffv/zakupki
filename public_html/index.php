@@ -142,7 +142,6 @@ else
     }
     catch (HTTP_Exception $e)
     {
-        var_dump($e);
         Kohana::$log->add(Log::ERROR, Kohana_Exception::text($e));
 
         send_error_page($e);

@@ -89,19 +89,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public_html/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="144" column="21" selection-start="4073" selection-end="4073" vertical-scroll-proportion="0.0">
+            <state line="144" column="0" selection-start="4052" selection-end="4052" vertical-scroll-proportion="0.3443396">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="route.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="route.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/classes/route.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="34" selection-start="408" selection-end="408" vertical-scroll-proportion="0.45990565">
+            <state line="13" column="34" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -143,8 +143,8 @@
         <option value="$PROJECT_DIR$/application/classes/controller/frontend/template.php" />
         <option value="$PROJECT_DIR$/application/views/frontend/error/index.php" />
         <option value="$PROJECT_DIR$/application/classes/controller/frontend/error.php" />
-        <option value="$PROJECT_DIR$/public_html/index.php" />
         <option value="$PROJECT_DIR$/application/classes/route.php" />
+        <option value="$PROJECT_DIR$/public_html/index.php" />
       </list>
     </option>
   </component>
@@ -611,16 +611,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/index.php">
+    <entry file="file://$PROJECT_DIR$/application/classes/route.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="21" selection-start="4073" selection-end="4073" vertical-scroll-proportion="0.0">
+        <state line="13" column="34" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/route.php">
+    <entry file="file://$PROJECT_DIR$/public_html/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="34" selection-start="408" selection-end="408" vertical-scroll-proportion="0.45990565">
+        <state line="144" column="0" selection-start="4052" selection-end="4052" vertical-scroll-proportion="0.3443396">
           <folding />
         </state>
       </provider>
