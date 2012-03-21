@@ -116,7 +116,7 @@ class Controller_Frontend_Template extends Controller_Template {
         {
             $local_prefix_template = $this->prefix_template;
 
-            if ($this->request->is_initial())
+            if ( ! $this->only_subrequest || $this->request->is_initial())
             {
                 if ( ! $this->_no_data)
                 {

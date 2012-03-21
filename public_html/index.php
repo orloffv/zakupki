@@ -119,9 +119,7 @@ if (Kohana::$environment == Kohana::PRODUCTION)
     {
         Kohana::$log->add(Log::ERROR, Kohana_Exception::text($e));
 
-        $response = Response::factory()->status($e->getCode())->body(View::factory('/error/index', array('code' => $e->getCode())));
-
-        echo $response->send_headers()->body();
+        send_error_page($e);
     }
     catch (Exception $e)
     {
@@ -133,9 +131,7 @@ if (Kohana::$environment == Kohana::PRODUCTION)
         // Make sure the logs are written
         Kohana::$log->write();
 
-        $response = Response::factory()->status(500)->body(View::factory('/error/index', array('code' => 500)));
-
-        echo $response->send_headers()->body();
+        send_error_page($e);
     }
 }
 else
@@ -148,9 +144,18 @@ else
     {
         Kohana::$log->add(Log::ERROR, Kohana_Exception::text($e));
 
-        $response = Response::factory()->status($e->getCode())->body(View::factory('/error/index', array('code' => $e->getCode())));
-
-        echo $response->send_headers()->body();
+        send_error_page($e);
     }
+}
+
+function send_error_page(Exception $e)
+{
+    $body = Request::factory('error/'.$e->getCode())->execute()->send_headers()->body();
+
+    $response = Response::factory()->status($e->getCode())->body(
+        $body
+    );
+
+    echo $response->send_headers()->body();
 }
 

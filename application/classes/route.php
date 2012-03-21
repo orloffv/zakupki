@@ -10,6 +10,13 @@ class Route extends Kohana_Route {
             'controller' => 'home',
             'action'     => 'index',
         ));
+
+        Route::set('frontend', 'error/<code>')
+            ->defaults(array(
+            'directory' => 'frontend',
+            'controller' => 'error',
+            'action'     => 'index',
+        ));
     }
 
     public static function get_backend_route()
