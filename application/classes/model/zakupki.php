@@ -8,7 +8,7 @@ class Model_Zakupki extends Jelly_Model {
             ->fields(array(
             'id'            => Jelly::field('primary'),
             'title'         => Jelly::field('text'),
-            'words_index'    => Jelly::field('text'),
+            //'words_index'    => Jelly::field('text'),
             'price'         => Jelly::field('float'),
             'customer'      => Jelly::field('text'),
             'owner_id'      => Jelly::field('integer'),
