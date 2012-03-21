@@ -4,17 +4,17 @@ class Route extends Kohana_Route {
 
     public static function get_frontend_route()
     {
-        Route::set('frontend', '(<controller>(/<action>(/<id>)))')
-            ->defaults(array(
-            'directory' => 'frontend',
-            'controller' => 'home',
-            'action'     => 'index',
-        ));
-
         Route::set('frontend_error', 'error/<code>')
             ->defaults(array(
             'directory' => 'frontend',
             'controller' => 'error',
+            'action'     => 'index',
+        ));
+
+        Route::set('frontend', '(<controller>(/<action>(/<id>)))')
+            ->defaults(array(
+            'directory' => 'frontend',
+            'controller' => 'home',
             'action'     => 'index',
         ));
     }
