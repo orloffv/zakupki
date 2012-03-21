@@ -11,3 +11,4 @@
     }
 </style>
 <link href="/static/assets/vendor/bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link rel="shortcut icon" href="/favicon.ico">

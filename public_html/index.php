@@ -109,15 +109,48 @@ require APPPATH.'bootstrap'.EXT;
  * If no source is specified, the URI will be automatically detected.
  */
 
-try
+if (Kohana::$environment == Kohana::PRODUCTION)
 {
-    echo Request::factory()->execute()->send_headers()->body();
+    try
+    {
+        echo Request::factory()->execute()->send_headers()->body();
+    }
+    catch (HTTP_Exception $e)
+    {
+        Kohana::$log->add(Log::ERROR, Kohana_Exception::text($e));
+
+        $response = Response::factory()->status($e->getCode())->body(View::factory('/error/index', array('code' => $e->getCode())));
+
+        echo $response->send_headers()->body();
+    }
+    catch (Exception $e)
+    {
+        Kohana::$log->add(Log::ERROR, Kohana_Exception::text($e));
+
+        $strace = Kohana_Exception::text($e)."\n--\n" . $e->getTraceAsString();
+        Kohana::$log->add(Log::STRACE, $strace);
+
+        // Make sure the logs are written
+        Kohana::$log->write();
+
+        $response = Response::factory()->status(500)->body(View::factory('/error/index', array('code' => 500)));
+
+        echo $response->send_headers()->body();
+    }
 }
-catch (HTTP_Exception $e)
+else
 {
-    Kohana::$log->add(Log::ERROR, Kohana_Exception::text($e));
+    try
+    {
+        echo Request::factory()->execute()->send_headers()->body();
+    }
+    catch (HTTP_Exception $e)
+    {
+        Kohana::$log->add(Log::ERROR, Kohana_Exception::text($e));
 
-    $response = Response::factory()->status($e->getCode())->body(View::factory('/error/index', array('code' => $e->getCode())));
+        $response = Response::factory()->status($e->getCode())->body(View::factory('/error/index', array('code' => $e->getCode())));
 
-    echo $response->send_headers()->body();
+        echo $response->send_headers()->body();
+    }
 }
+
