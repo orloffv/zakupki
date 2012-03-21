@@ -4,6 +4,8 @@ class Controller_Frontend_Home extends Controller_Frontend_Template
 {
     public function action_index()
     {
+        Frontend::set_title('Список закупок');
+
         $session = Session::instance();
         $last = $session->get('last');
 
