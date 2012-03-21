@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad8b8be1-12bd-4928-889c-148e05cae98a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/classes/controller/frontend/error.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/error/index.php" afterPath="$PROJECT_DIR$/application/views/frontend/error/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/frontend/template.php" afterPath="$PROJECT_DIR$/application/classes/controller/frontend/template.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/route.php" afterPath="$PROJECT_DIR$/application/classes/route.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/layout/head.php" afterPath="$PROJECT_DIR$/application/views/frontend/layout/head.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/index.php" afterPath="$PROJECT_DIR$/public_html/index.php" />
     </list>
     <ignored path="zakupki.iws" />
@@ -39,10 +35,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="error.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/classes/controller/frontend/error.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="57" selection-start="2440" selection-end="2440" vertical-scroll-proportion="2.3349056">
+            <state line="66" column="57" selection-start="2440" selection-end="2440" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -96,16 +92,16 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_html/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="152" column="0" selection-start="4199" selection-end="4199" vertical-scroll-proportion="0.0">
+            <state line="144" column="21" selection-start="4073" selection-end="4073" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="route.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="route.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/classes/route.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="43" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
+            <state line="13" column="34" selection-start="408" selection-end="408" vertical-scroll-proportion="0.45990565">
               <folding />
             </state>
           </provider>
@@ -144,11 +140,11 @@
         <option value="$PROJECT_DIR$/application/views/frontend/layout/header.php" />
         <option value="$PROJECT_DIR$/application/views/frontend/layout/base.php" />
         <option value="$PROJECT_DIR$/application/views/frontend/layout/head.php" />
-        <option value="$PROJECT_DIR$/application/classes/route.php" />
-        <option value="$PROJECT_DIR$/public_html/index.php" />
         <option value="$PROJECT_DIR$/application/classes/controller/frontend/template.php" />
         <option value="$PROJECT_DIR$/application/views/frontend/error/index.php" />
         <option value="$PROJECT_DIR$/application/classes/controller/frontend/error.php" />
+        <option value="$PROJECT_DIR$/public_html/index.php" />
+        <option value="$PROJECT_DIR$/application/classes/route.php" />
       </list>
     </option>
   </component>
@@ -573,13 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="43" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/frontend/layout/base.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="29" selection-start="151" selection-end="151" vertical-scroll-proportion="-3.125">
@@ -590,13 +579,6 @@
     <entry file="file://$PROJECT_DIR$/application/classes/controller/frontend/ajax/controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="41" selection-start="550" selection-end="575" vertical-scroll-proportion="0.495283">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="0" selection-start="4199" selection-end="4199" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -624,7 +606,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/controller/frontend/error.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="57" selection-start="2440" selection-end="2440" vertical-scroll-proportion="2.3349056">
+        <state line="66" column="57" selection-start="2440" selection-end="2440" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="144" column="21" selection-start="4073" selection-end="4073" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="34" selection-start="408" selection-end="408" vertical-scroll-proportion="0.45990565">
           <folding />
         </state>
       </provider>

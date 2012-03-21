@@ -11,7 +11,7 @@ class Route extends Kohana_Route {
             'action'     => 'index',
         ));
 
-        Route::set('frontend', 'error/<code>')
+        Route::set('frontend_error', 'error/<code>')
             ->defaults(array(
             'directory' => 'frontend',
             'controller' => 'error',
