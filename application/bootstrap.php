@@ -131,6 +131,7 @@ $default_modules = array(
     'jelly'        => MODPATH.'jelly',
     'pagination'   => MODPATH.'pagination',
     'message'      => MODPATH.'message',
+    'kohana-git'   => MODPATH.'kohana-git',
 );
 
 $modules = (Kohana::$environment === Kohana::PRODUCTION) ?
@@ -155,7 +156,7 @@ if (Kohana::$is_cli)
     Route::set('cli', '(<controller>(/<action>(/<id>)))')
         ->defaults(array(
         'directory' => 'cli',
-        'controller' => 'cron',
+        'controller' => 'cli',
         'action'     => 'ls',
     ));
 }

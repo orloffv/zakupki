@@ -22,3 +22,6 @@
 [submodule "framework/modules/message"]
 	path = framework/modules/message
 	url = git://github.com/GeertDD/kohana-message.git
+[submodule "framework/modules/kohana-git"]
+	path = framework/modules/kohana-git
+	url = git://github.com/orloffv/kohana-git.git
