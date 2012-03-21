@@ -131,6 +131,7 @@ $default_modules = array(
     'jelly'        => MODPATH.'jelly',
     'pagination'   => MODPATH.'pagination',
     'message'      => MODPATH.'message',
+    'kohana-morphy'=> MODPATH.'kohana-morphy',
 );
 
 $modules = (Kohana::$environment === Kohana::PRODUCTION) ?

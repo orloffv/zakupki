@@ -81,6 +81,7 @@ class Frontend_Core {
             'view'           => 'pagination/frontend',
             'show_pagi_number'           => FALSE,
             'title' => NULL,
+            'counter_show' => false
         );
 
         if (is_array($config) AND count($config))

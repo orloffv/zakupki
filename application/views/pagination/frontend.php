@@ -52,15 +52,14 @@ for ($i = $n7; $i <= $n8; $i++)
 {
 	$links[$i] = $i;
 }
-
 ?>
 
 <div class="pagination">
     <ul>
         <?php if ($first_page !== FALSE): ?>
-            <li class="prev"><a href="<?=$page->url($first_page)?>">&larr; Назад</a></li>
+            <li class="prev"><a href="<?=$page->url($first_page)?>">&larr;</a></li>
         <?php else: ?>
-            <li class="prev disabled"><a href="#">&larr; Назад</a></li>
+            <li class="prev disabled"><a href="#">&larr;</a></li>
         <?php endif;?>
 
         <?php foreach ($links as $number => $content): ?>
@@ -72,10 +71,13 @@ for ($i = $n7; $i <= $n8; $i++)
         <?php endforeach ?>
 
         <?php if ($last_page !== FALSE): ?>
-            <li class="next"><a href="<?=$page->url($last_page)?>">Вперед &rarr;</a></li>
+            <li class="next"><a href="<?=$page->url($last_page)?>">&rarr;</a></li>
         <?php else: ?>
-            <li class="next disabled"><a href="#">Вперед &rarr;</a></li>
+            <li class="next disabled"><a href="#">&rarr;</a></li>
         <?php endif ?>
+        <?php if(isset($counter_show) && $counter_show):?>
+            <li class="disabled"><a href="#">всего: <?=$total_items?></a></li>
+        <?php endif;?>
     </ul>
 </div>
 <!-- .pagination -->
