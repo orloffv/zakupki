@@ -77,10 +77,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pagination.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pagination.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/classes/pagination.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="4" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0952381">
+            <state line="4" column="4" selection-start="112" selection-end="112" vertical-scroll-proportion="-2.3076923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/bootstrap.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="133" column="0" selection-start="3825" selection-end="3825" vertical-scroll-proportion="0.70884144">
               <folding />
             </state>
           </provider>
@@ -124,7 +133,6 @@
         <option value="$PROJECT_DIR$/application/classes/zakupki.php" />
         <option value="$PROJECT_DIR$/application/views/frontend/home/index.php" />
         <option value="$PROJECT_DIR$/application/classes/cron/zakupki.php" />
-        <option value="$PROJECT_DIR$/application/bootstrap.php" />
         <option value="$PROJECT_DIR$/framework/modules/kohana-morphy/config/morphy.php" />
         <option value="$PROJECT_DIR$/application/classes/model/zakupki.php" />
         <option value="$PROJECT_DIR$/framework/modules/kohana-morphy/classes/kohana/morphy.php" />
@@ -133,6 +141,7 @@
         <option value="$PROJECT_DIR$/application/views/pagination/frontend.php" />
         <option value="$PROJECT_DIR$/framework/modules/pagination/classes/kohana/pagination.php" />
         <option value="$PROJECT_DIR$/application/classes/pagination.php" />
+        <option value="$PROJECT_DIR$/application/bootstrap.php" />
       </list>
     </option>
   </component>
@@ -421,13 +430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="44" selection-start="3869" selection-end="3869" vertical-scroll-proportion="0.7079646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/mbstring.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1008" column="9" selection-start="31490" selection-end="31490" vertical-scroll-proportion="0.4237805">
@@ -521,7 +523,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/pagination.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="4" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0952381">
+        <state line="4" column="4" selection-start="112" selection-end="112" vertical-scroll-proportion="-2.3076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="0" selection-start="3825" selection-end="3825" vertical-scroll-proportion="0.70884144">
           <folding />
         </state>
       </provider>
