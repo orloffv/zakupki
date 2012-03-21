@@ -29,5 +29,12 @@ class Controller_Frontend_Home extends Controller_Frontend_Template
         $this->context['pagination'] = $pagination->render();
         $this->context['new_items'] = $new_items;
     }
+
+    public function action_update()
+    {
+        Cron_Zakupki::factory()->run();
+
+        $this->request->redirect('/');
+    }
 }
 

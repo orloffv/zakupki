@@ -1,6 +1,6 @@
 <div class="alert <?=$new_items > 0 ? 'alert-success': ''?>">
     <a class="close" data-dismiss="alert">×</a>
-    <?=Text::ru_num($new_items, 'нов', 'ое', 'ых', 'ых', 'нет новых')?>
+    <?=Text::ru_num($new_items, 'нов', 'ое', 'ых', 'ых', 'нет новых')?>, <a href="/home/update">обновить</a>
 </div>
 <table class="table table-striped">
     <thead>

@@ -7,6 +7,11 @@ class Zakupki {
         $data = $this->parser($url);
         $result = $this->save($data);
 
+        if (count($data))
+        {
+            Dblog::add("Добавил : ".$result);
+        }
+
         return $result;
     }
 
@@ -51,6 +56,11 @@ class Zakupki {
         $items = Feed::parse($curl->getData());
 
         $return_data = array();
+
+        if ( ! $items)
+        {
+            Dblog::add("Не получил правильные данные, " . $curl->getStatus());
+        }
 
         foreach ($items as $item)
         {
