@@ -2,6 +2,7 @@
     <a class="close" data-dismiss="alert">×</a>
     <?=Text::ru_num($new_items, 'нов', 'ое', 'ых', 'ых', 'нет новых')?>, <a href="/home/update">обновить</a>
 </div>
+<blockquote style="margin: 0px;"><small>последняя проверка <?=date('d.m.y H:i', $last_check->dt_create)?>, <?=$last_check->status?></small></blockquote>
 <table class="table table-striped">
     <thead>
         <tr>

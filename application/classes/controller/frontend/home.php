@@ -12,6 +12,7 @@ class Controller_Frontend_Home extends Controller_Frontend_Template
         $new_items = Jelly::query('zakupki')->where('date', '>', $last)->count();
 
         $last_item = Jelly::query('zakupki')->limit(1)->order_by('date', 'desc')->execute();
+        $last_check = Jelly::query('log')->limit(1)->order_by('dt_create', 'desc')->execute();
 
         $session->set('last', $last_item->date);
 
@@ -30,6 +31,7 @@ class Controller_Frontend_Home extends Controller_Frontend_Template
         $this->context['items'] = $items;
         $this->context['pagination'] = $pagination->render();
         $this->context['new_items'] = $new_items;
+        $this->context['last_check'] = $last_check;
     }
 
     public function action_update()
