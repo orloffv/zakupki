@@ -57,7 +57,7 @@ class Zakupki {
 
         $return_data = array();
 
-        if ( ! $items)
+        if ( ! count($items))
         {
             Dblog::add("Не получил правильные данные, " . $curl->getStatus());
         }
