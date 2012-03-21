@@ -9,6 +9,6 @@ class Controller_Cli_Git extends Controller_Cli {
 
     public function action_pull_submodules()
     {
-        $this->write(Git::factory()->run("submodule foreach git pull"));
+        $this->write(Git::factory()->run("submodule update --recursive"));
     }
 }
