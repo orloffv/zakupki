@@ -3,25 +3,29 @@
     <?=Text::ru_num($new_items, 'нов', 'ое', 'ых', 'ых', 'нет новых')?>
 </div>
 <table class="table table-striped">
-    <tr>
-        <th>Название</th>
-        <th>Тип</th>
-        <th>Цена</th>
-        <th>Дата</th>
-        <th>Заказчик</th>
-    </tr>
-    <?php foreach($items as $item):?>
+    <thead>
         <tr>
-            <td>
-                <a title="<?=$item->title?>" href="http://zakupki.gov.ru/pgz/public/action/orders/info/common_info/show?notificationId=<?=$item->owner_id?>">
-                    <?=Text::limit_chars($item->title, 100)?>
-                </a>
-            </td>
-            <td><?=__($item->type)?></td>
-            <td><?=number_format($item->price)?></td>
-            <td><nobr><?=date('d.m.y H:i', $item->date)?></nobr></td>
-            <td><span title="<?=$item->customer?>"><?=Text::limit_chars($item->customer, 75)?></span></td>
+            <th>Название</th>
+            <th>Тип</th>
+            <th>Цена</th>
+            <th>Дата</th>
+            <th width="310px">Заказчик</th>
         </tr>
-    <?php endforeach;?>
+    </thead>
+    <tbody>
+        <?php foreach($items as $item):?>
+            <tr>
+                <td>
+                    <a title="<?=$item->title?>" href="http://zakupki.gov.ru/pgz/public/action/orders/info/common_info/show?notificationId=<?=$item->owner_id?>">
+                        <?=Text::limit_chars($item->title, 160)?>
+                    </a>
+                </td>
+                <td><?=__($item->type)?></td>
+                <td><?=number_format($item->price)?></td>
+                <td><nobr><?=date('d.m.y H:i', $item->date)?></nobr></td>
+                <td><span title="<?=$item->customer?>"><?=Text::limit_chars($item->customer, 75)?></span></td>
+            </tr>
+        <?php endforeach;?>
+    </tbody>
 </table>
 <?=$pagination?>
