@@ -2,20 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad8b8be1-12bd-4928-889c-148e05cae98a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/classes/api.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/classes/api/base.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/classes/api/core.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/classes/api/interface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/classes/api/loader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/classes/api/log.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/classes/api/zakupki.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/classes/filter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/frontend/home.php" afterPath="$PROJECT_DIR$/application/classes/controller/frontend/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/frontend/log.php" afterPath="$PROJECT_DIR$/application/classes/controller/frontend/log.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/frontend/template.php" afterPath="$PROJECT_DIR$/application/classes/controller/frontend/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/jelly/builder.php" afterPath="$PROJECT_DIR$/application/classes/jelly/builder.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/frontend/home/index.php" afterPath="$PROJECT_DIR$/application/views/frontend/home/index.php" />
     </list>
     <ignored path="zakupki.iws" />
@@ -47,10 +33,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/classes/controller/frontend/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="8" selection-start="636" selection-end="636" vertical-scroll-proportion="0.48989114">
+            <state line="21" column="8" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -119,15 +105,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/frontend/home/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="42" selection-start="268" selection-end="268" vertical-scroll-proportion="-2.5">
+            <state line="10" column="35" selection-start="496" selection-end="496" vertical-scroll-proportion="0.24232633">
               <folding>
-                <marker date="1332423069000" expanded="true" signature="718:1427" placeholder="..." />
-                <marker date="1332423069000" expanded="true" signature="933:1427" placeholder="..." />
-                <marker date="1332423069000" expanded="true" signature="992:1427" placeholder="..." />
-                <marker date="1332423069000" expanded="true" signature="1013:1288" placeholder="..." />
+                <marker date="1332425798000" expanded="true" signature="801:1510" placeholder="..." />
+                <marker date="1332425798000" expanded="true" signature="1016:1510" placeholder="..." />
+                <marker date="1332425798000" expanded="true" signature="1075:1510" placeholder="..." />
+                <marker date="1332425798000" expanded="true" signature="1096:1371" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -155,13 +141,13 @@
         <option value="$PROJECT_DIR$/application/classes/controller/frontend/template.php" />
         <option value="$PROJECT_DIR$/application/classes/api/interface.php" />
         <option value="$PROJECT_DIR$/application/classes/controller/frontend/log.php" />
-        <option value="$PROJECT_DIR$/application/views/frontend/home/index.php" />
         <option value="$PROJECT_DIR$/application/classes/api/log.php" />
         <option value="$PROJECT_DIR$/application/classes/jelly/builder.php" />
         <option value="$PROJECT_DIR$/application/classes/api/zakupki.php" />
         <option value="$PROJECT_DIR$/application/classes/api/core.php" />
         <option value="$PROJECT_DIR$/application/classes/filter.php" />
         <option value="$PROJECT_DIR$/application/classes/controller/frontend/home.php" />
+        <option value="$PROJECT_DIR$/application/views/frontend/home/index.php" />
       </list>
     </option>
   </component>
@@ -486,18 +472,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/frontend/home/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="42" selection-start="268" selection-end="268" vertical-scroll-proportion="-2.5">
-          <folding>
-            <marker date="1332423069000" expanded="true" signature="718:1427" placeholder="..." />
-            <marker date="1332423069000" expanded="true" signature="933:1427" placeholder="..." />
-            <marker date="1332423069000" expanded="true" signature="992:1427" placeholder="..." />
-            <marker date="1332423069000" expanded="true" signature="1013:1288" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/api/zakupki.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="33" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0">
@@ -528,8 +502,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/controller/frontend/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="8" selection-start="636" selection-end="636" vertical-scroll-proportion="0.48989114">
+        <state line="21" column="8" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/frontend/home/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="35" selection-start="496" selection-end="496" vertical-scroll-proportion="0.24232633">
+          <folding>
+            <marker date="1332425798000" expanded="true" signature="801:1510" placeholder="..." />
+            <marker date="1332425798000" expanded="true" signature="1016:1510" placeholder="..." />
+            <marker date="1332425798000" expanded="true" signature="1075:1510" placeholder="..." />
+            <marker date="1332425798000" expanded="true" signature="1096:1371" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
