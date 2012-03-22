@@ -6,33 +6,28 @@ class Controller_Frontend_Home extends Controller_Frontend_Template
     {
         Frontend::set_title('Список закупок');
 
-        $session = Session::instance();
-        $last = $session->get('last');
+        $last = $this->session->get('last');
 
-        $new_items = Jelly::query('zakupki')->where('date', '>', $last)->count();
+        $last_item = Api_Loader::load('zakupki')->get_last_by('date');
 
-        $last_item = Jelly::query('zakupki')->limit(1)->order_by('date', 'desc')->execute();
-        $last_check = Jelly::query('log')->limit(1)->order_by('dt_create', 'desc')->execute();
+        $this->session->set('last', $last_item->date);
 
-        $session->set('last', $last_item->date);
+        $filter = new Filter();
 
-        $query = Jelly::query('zakupki')->order_by('date', 'desc');
-
-        $pagination = Frontend::paging(
-            $this->module_name,
-            $query->count(),
-            array(
-                'items_per_page' => 100,
-                'counter_show' => true
-            )
+        $filter->add(
+            'day',
+            Arr::merge(array('Все даты'), Api_Loader::load('zakupki')->get_days(10)),
+            '=',
+            Db::expr("FROM_UNIXTIME(date, '%d.%m.%Y')")
         );
 
-        $items = $query->paging($pagination, $pagination);
+        $this->context['items']         = Api_Loader::load('zakupki')->filter($filter)->get_items(
+            $this->context['pagination'], 100, array('counter_show' => true)
+        );
 
-        $this->context['items'] = $items;
-        $this->context['pagination'] = $pagination->render();
-        $this->context['new_items'] = $new_items;
-        $this->context['last_check'] = $last_check;
+        $this->context['filter']        = $filter->get_options();
+        $this->context['new_items']     = Api_Loader::load('zakupki')->count_new($last);
+        $this->context['last_check']    = Api_Loader::load('log')->get_last_by('dt_create');
     }
 
     public function action_update()

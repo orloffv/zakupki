@@ -12,6 +12,8 @@ class Controller_Frontend_Template extends Controller_Template {
      */
     public $data = array();
 
+    public $session;
+
     /**
      * @var array Контекст для content шаблона
      */
@@ -79,6 +81,8 @@ class Controller_Frontend_Template extends Controller_Template {
         {
             $this->context_template = $request->directory().'/'.$this->context_template;
         }
+
+        $this->session = Session::instance();
 
         parent::__construct($request, $response);
     }

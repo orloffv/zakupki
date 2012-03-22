@@ -2,6 +2,14 @@
     <a class="close" data-dismiss="alert">×</a>
     <?=Text::ru_num($new_items, 'нов', 'ое', 'ых', 'ых', 'нет новых')?>, <a href="/home/update">обновить</a>
 </div>
+<?=Form::open(null, array('method' => 'get'))?>
+    <?=Form::select('day', Arr::path($filter, 'day.options'), Arr::path($filter, 'day.value'))?>
+<?=Form::close()?>
+<script>
+    $("form input, form select").change(function(){
+        $(this).closest('form').submit();
+    });
+</script>
 <blockquote style="margin: 0px;"><small>последняя <a href="/log/">проверка</a> <?=date('d.m.y H:i', $last_check->dt_create)?>, <?=$last_check->status?></small></blockquote>
 <table class="table table-striped">
     <thead>

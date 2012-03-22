@@ -4,20 +4,9 @@ class Controller_Frontend_Log extends Controller_Frontend_Template
 {
     public function action_index()
     {
-        $query = Jelly::query('log')->order_by('dt_create', 'desc');
-
-        $pagination = Frontend::paging(
-            $this->module_name,
-            $query->count(),
-            array(
-                'items_per_page' => 100
-            )
+        $this->context['items'] = Api_Loader::load('log')->get_items(
+            $this->context['pagination'], 100, array('counter_show' => true)
         );
-
-        $items = $query->paging($pagination, $pagination);
-
-        $this->context['items'] = $items;
-        $this->context['pagination'] = $pagination->render();
     }
 }
 
