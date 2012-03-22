@@ -109,7 +109,30 @@ require APPPATH.'bootstrap'.EXT;
  * If no source is specified, the URI will be automatically detected.
  */
 
-if (Kohana::$environment == Kohana::PRODUCTION)
+if (Kohana::$is_cli)
+{
+    try
+    {
+        echo Request::factory()->execute()->send_headers()->body();
+    }
+    catch (HTTP_Exception $e)
+    {
+        Kohana::$log->add(Log::ERROR, Kohana_Exception::text($e));
+
+        $trace = $e->getTrace();
+        $uri = 'undefined';
+        $request = Arr::path($trace, '0.args.0');
+        if ($request instanceof Request)
+        {
+            $uri = $request->uri();
+        }
+
+        $uri = base64_encode($uri);
+
+        echo Request::factory('cli/error/' . $uri)->execute()->send_headers()->body();
+    }
+}
+elseif (Kohana::$environment == Kohana::PRODUCTION)
 {
     try
     {
