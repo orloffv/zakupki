@@ -37,4 +37,9 @@ class Jelly_Builder extends Jelly_Core_Builder {
     {
         return $this->limit($pagination->items_per_page)->offset($pagination->offset)->execute();
     }
+
+    public function auto_order()
+    {
+        return $this;
+    }
 }

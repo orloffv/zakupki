@@ -5,6 +5,7 @@ class Model_Zakupki extends Jelly_Model {
     public static function initialize(Jelly_Meta $meta)
     {
         $meta->table('zakupki')
+            ->sorting(array('date' => 'desc'))
             ->fields(array(
             'id'            => Jelly::field('primary'),
             'title'         => Jelly::field('text'),
