@@ -19,10 +19,10 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Название</th>
-            <th>Тип</th>
-            <th>Цена</th>
-            <th>Дата</th>
+            <th class="<?=$order->get_class('title')?>"><a href="<?=$order->get_uri('title')?>">Название</a></th>
+            <th width="40px" class="<?=$order->get_class('type')?>"><a href="<?=$order->get_uri('type')?>">Тип</a></th>
+            <th class="<?=$order->get_class('price')?>"><a href="<?=$order->get_uri('price')?>">Цена</a></th>
+            <th class="<?=$order->get_class('date')?>"><a href="<?=$order->get_uri('date')?>">Дата</a></th>
             <th width="310px">Заказчик</th>
         </tr>
     </thead>

@@ -7,6 +7,7 @@
 <link href="/static/assets/vendor/bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet">
 <link href="/static/assets/vendor/bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
 <link rel="shortcut icon" href="/favicon.ico">
+<link href="/static/assets/css/main.css" rel="stylesheet">
 
 <style>
     body {

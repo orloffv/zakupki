@@ -30,6 +30,7 @@ class Controller_Frontend_Home extends Controller_Frontend_Template
         $this->context['filter']        = $filter->get_options();
         $this->context['new_items']     = Api_Loader::load('zakupki')->count_new($last);
         $this->context['last_check']    = Api_Loader::load('log')->get_last_by('dt_create');
+        $this->context['order']         = $order;
     }
 
     public function action_update()
