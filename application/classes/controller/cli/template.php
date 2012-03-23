@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-abstract class Controller_Cli extends Controller {
+abstract class Controller_Cli_Template extends Controller {
     
     public function before()
     {
@@ -19,10 +19,9 @@ abstract class Controller_Cli extends Controller {
 
         foreach($methods as $method)
         {
-            $prefix = substr($method, 0, 7);
             if (substr($method, 0, 6) == 'action' AND $method != 'action_ls')
             {
-                echo substr($method, 7)."\n";
+                $this->write(substr($method, 7));
             }
         }
     }

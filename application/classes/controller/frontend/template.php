@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Frontend_Template extends Controller_Template {
+abstract class Controller_Frontend_Template extends Controller_Template {
 
     /**
      * @var string Имя файла основного шаблона

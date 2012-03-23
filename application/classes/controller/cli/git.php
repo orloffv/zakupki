@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Cli_Git extends Controller_Cli {
+class Controller_Cli_Git extends Controller_Cli_Template {
 
     public function action_pull()
     {

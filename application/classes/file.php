@@ -108,4 +108,21 @@ class File extends Kohana_File {
     {
         return str_replace($base, '', $path);
     }
+
+    public static function get_files($path)
+    {
+        $files = array();
+
+        $path = realpath($path);
+
+        if (is_dir($path))
+        {
+            $dir_files = scandir($path);
+            unset($dir_files[0], $dir_files[1]);
+
+            $files = $dir_files;
+        }
+
+        return $files;
+    }
 }
