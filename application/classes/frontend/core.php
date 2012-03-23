@@ -3,7 +3,6 @@
 class Frontend_Core {
 
     const VERSION = '1.1-beta';
-    const DEFAULT_ITEMS_PER_PAGE = 20;
 
     public static $title_separator = ' / ';
     
@@ -25,73 +24,7 @@ class Frontend_Core {
     {
         return Frontend_Menu::factory();
     }
-    
-    /**
-     * Сохраняет и/или возвращает по сколько показывать элементов на странице
-     * используется с Pagination
-     * @param string $module_name
-     * @return string
-     */
-    public static function items_per_page($module_name = 'default')
-    {
-        $name = $module_name.'_items_per_page';
-        
-        if (isset($_GET['c']) AND (int) $_GET['c'])
-        {
-            $value = (int) $_GET['c'];
 
-            if (Cookie::get($name) != $value)
-            {
-                Cookie::set($name, $value);
-            }
-
-            if (Session::instance()->get($name) != $value)
-            {
-                Session::instance()->set($name, $value);
-            }
-            
-            return $value;
-        }
-        elseif ($value = Cookie::get($name))
-        {
-            return $value;
-        }
-        elseif ($value = Session::instance()->get($name))
-        {
-            return $value;
-        }
-        else
-        {
-            return self::DEFAULT_ITEMS_PER_PAGE;
-        }
-    }
-
-    /**
-     * Frontend Pagination::factory wrapper
-     * @param string $module_name
-     * @param integer $total_items
-     * @param array $config
-     * @return Pagination
-     */
-    public static function paging($module_name, $total_items, array $config = NULL)
-    {
-        $_config = array(
-            'total_items'    => $total_items,
-            'items_per_page' => self::items_per_page($module_name),
-            'view'           => 'pagination/frontend',
-            'show_pagi_number'           => FALSE,
-            'title' => NULL,
-            'counter_show' => false
-        );
-
-        if (is_array($config) AND count($config))
-        {
-            $_config = Arr::merge($_config, $config);
-        }
-        
-        return Pagination::factory($_config);
-    }
-    
     /**
      * @var string заголовок страницы
      */

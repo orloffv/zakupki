@@ -52,7 +52,12 @@ abstract class Api_Core {
         return $this;
     }
 
-    public function get_query()
+    public function get(&$pagination, $limit = null, array $pagination_config = array())
+    {
+        return $this->get_query()->auto_order()->ln_paging($pagination, $limit, $pagination_config);
+    }
+
+    protected function get_query()
     {
         $query = Jelly::query($this->module);
 

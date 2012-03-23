@@ -7,9 +7,9 @@ class Api_Zakupki extends Api_Core implements Api_Interface {
         return $this->get_query()->where('date', '>', $date)->count();
     }
 
-    public function get_items(&$pagination, $limit = null, array $pagination_config = array())
+    public function get(&$pagination, $limit = null, array $pagination_config = array())
     {
-        return $this->get_query()->order_by('date', 'desc')->my_paging($pagination, $limit, $pagination_config);
+        return $this->get_query()->order_by('date', 'desc')->ln_paging($pagination, $limit, $pagination_config);
     }
 
     public function get_days($limit = null)

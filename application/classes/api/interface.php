@@ -2,7 +2,7 @@
 
 interface Api_Interface {
 
-    //public function get();
+    public function get(&$pagination, $limit = null, array $pagination_config = array());
 
     public function put($data, $id = null, $validation = false);
 

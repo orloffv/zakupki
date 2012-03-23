@@ -21,8 +21,8 @@ class Controller_Frontend_Home extends Controller_Frontend_Template
             Db::expr("FROM_UNIXTIME(date, '%d.%m.%Y')")
         );
 
-        $this->context['items']         = Api_Loader::load('zakupki')->filter($filter)->get_items(
-            $this->context['pagination'], 100, array('counter_show' => true)
+        $this->context['items']         = Api_Loader::load('zakupki')->filter($filter)->get(
+            $this->context['pagination'], 100
         );
 
         $this->context['filter']        = $filter->get_options();
