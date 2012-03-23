@@ -2,6 +2,7 @@
     <a class="close" data-dismiss="alert">×</a>
     <?=Text::ru_num($new_items, 'нов', 'ое', 'ых', 'ых', 'нет новых')?>, <a href="/home/update">обновить</a>
 </div>
+
 <div style="float:right">
     <?=Form::open(null, array('method' => 'get'))?>
         <?=Form::select('day', Arr::path($filter, 'day.options'), Arr::path($filter, 'day.value'))?>
@@ -16,7 +17,8 @@
         $(this).closest('form').submit();
     });
 </script>
-<table class="table table-striped">
+
+<table class="table table-striped" id="data-grid">
     <thead>
         <tr>
             <th class="<?=$order->get_class('title')?>"><a href="<?=$order->get_uri('title')?>">Название</a></th>

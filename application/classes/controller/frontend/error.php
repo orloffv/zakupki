@@ -41,7 +41,6 @@ class Controller_Frontend_Error extends Controller_Frontend_Template
         415 => 'Неподдерживаемый тип данных',
         416 => 'Запрашиваемый диапазон не достижим',
         417 => 'Ожидаемое не приемлемо',
-        418 => 'Я - чайник',
         422 => 'Необрабатываемый экземпляр',
         423 => 'Заблокировано',
         424 => 'Невыполненная зависимость',
@@ -65,6 +64,6 @@ class Controller_Frontend_Error extends Controller_Frontend_Template
     {
         $this->context['code'] = $code = $this->request->param('code');
         $this->context['message'] = Arr::get($this->codes, $code, 'Неизвестная ошибка');
-        $this->response->status($code);
+        $this->response->status(key_exists($code, $this->codes) ? $code : 404);
     }
 }

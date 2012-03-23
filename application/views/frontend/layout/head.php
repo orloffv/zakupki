@@ -8,6 +8,7 @@
 <link href="/static/assets/vendor/bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
 <link rel="shortcut icon" href="/favicon.ico">
 <link href="/static/assets/css/main.css" rel="stylesheet">
+<script src="/static/assets/js/main.js"></script>
 
 <style>
     body {
