@@ -4,6 +4,7 @@ abstract class Api_Core {
 
     protected $module;
     protected $filter;
+    protected $order;
 
     public function set_module($module)
     {
@@ -52,9 +53,16 @@ abstract class Api_Core {
         return $this;
     }
 
+    public function order(Order $order = null)
+    {
+        $this->order = $order;
+
+        return $this;
+    }
+
     public function get(&$pagination, $limit = null, array $pagination_config = array())
     {
-        return $this->get_query()->auto_order()->ln_paging($pagination, $limit, $pagination_config);
+        return $this->get_query()->ln_paging($pagination, $limit, $pagination_config);
     }
 
     protected function get_query()
@@ -73,6 +81,8 @@ abstract class Api_Core {
                 }
             }
         }
+
+        $query->set_order($this->order);
 
         return $query;
     }

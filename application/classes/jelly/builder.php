@@ -2,6 +2,8 @@
 
 class Jelly_Builder extends Jelly_Core_Builder {
 
+    private $order;
+
     /**
      * Постраничный вывод
      * @param &string $target
@@ -38,8 +40,24 @@ class Jelly_Builder extends Jelly_Core_Builder {
         return $this->limit($pagination->items_per_page)->offset($pagination->offset)->execute();
     }
 
-    public function auto_order()
+    public function set_order(Order $order = null)
     {
-        return $this;
+        $this->order = $order;
+    }
+
+    public function execute($db = NULL, $type = NULL, $ignored = NULL)
+	{
+        $type === NULL AND $type = $this->_type;
+
+        if (Database::SELECT == $type)
+        {
+            if ($this->order && $this->order->get_field())
+            {
+                $this->_order_by = array();
+                $this->order_by($this->order->get_field(), $this->order->get_direction());
+            }
+        }
+
+        return parent::execute($db, $type, $ignored);
     }
 }

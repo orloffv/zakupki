@@ -14,6 +14,8 @@ class Controller_Frontend_Home extends Controller_Frontend_Template
 
         $filter = new Filter();
 
+        $order = new Order('zakupki');
+
         $filter->add(
             'day',
             Arr::merge(array('Все даты'), Api_Loader::load('zakupki')->get_days(10)),
@@ -21,7 +23,7 @@ class Controller_Frontend_Home extends Controller_Frontend_Template
             Db::expr("FROM_UNIXTIME(date, '%d.%m.%Y')")
         );
 
-        $this->context['items']         = Api_Loader::load('zakupki')->filter($filter)->get(
+        $this->context['items']         = Api_Loader::load('zakupki')->order($order)->filter($filter)->get(
             $this->context['pagination'], 100
         );
 
