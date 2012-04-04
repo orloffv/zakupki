@@ -4,6 +4,13 @@ class Zakupki {
 
     public function go($url)
     {
+        $last_item = Api_Loader::load('log')->get_last_by('dt_create');
+
+        if (time() - $last_item->dt_create <= 120)
+        {
+            return false;
+        }
+
         $data = $this->parser($url);
         $result = $this->save($data);
 
@@ -19,7 +26,7 @@ class Zakupki {
     {
         $add_data = array();
 
-        $last_item = Jelly::query('zakupki')->limit(1)->order_by('date', 'desc')->execute();
+        $last_item = Api_Loader::load('zakupki')->get_last_by('date');
 
         if ( ! $last_item)
         {

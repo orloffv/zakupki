@@ -6,11 +6,11 @@ class Controller_Frontend_Home extends Controller_Frontend_Template
     {
         Frontend::set_title('Список закупок');
 
-        $last = $this->session->get('last');
+        $last = Cookie::get('last', 0);
 
         $last_item = Api_Loader::load('zakupki')->get_last_by('date');
 
-        $this->session->set('last', $last_item->date);
+        Cookie::set('last', $last_item->date);
 
         $filter = new Filter();
 
