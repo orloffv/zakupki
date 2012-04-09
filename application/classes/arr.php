@@ -14,6 +14,18 @@ class Arr extends Kohana_Arr {
         }
     }
 
+    public static function value_value(array $array)
+    {
+        $return_array = array();
+
+        foreach ($array as $value)
+        {
+            $return_array[$value] = $value;
+        }
+
+        return $return_array;
+    }
+
     /**
      * push an array to an array: push(@array, @array2, @array3)
      *

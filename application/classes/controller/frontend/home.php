@@ -18,7 +18,7 @@ class Controller_Frontend_Home extends Controller_Frontend_Template
 
         $filter->add(
             'day',
-            Arr::merge(array('Все даты'), Api_Loader::load('zakupki')->get_days(10)),
+            Arr::merge(array('Все даты'), Arr::value_value(Api_Loader::load('zakupki')->get_days(10))),
             '=',
             Db::expr("FROM_UNIXTIME(date, '%d.%m.%Y')")
         );
