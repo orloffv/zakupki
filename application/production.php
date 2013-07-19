@@ -3,7 +3,7 @@
 //Asset::$url = 'http://domainname/';
 //Media::$url = 'http://domainname/';
 
-//System::$domain_name = 'kohana-base.local';
+System::$domain_name = 'zakupki.ovdev.ru';
 /*
 Cache::$need = array(
     'route' => TRUE,
