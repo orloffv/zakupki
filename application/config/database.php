@@ -21,7 +21,7 @@ return array
             'username'   => 'root',
             'password'   => 'root',
             'persistent' => FALSE,
-            'database'   => 'zakupki',
+            'database'   => 'prices',
         ),
         'table_prefix' => '',
         'charset'      => 'utf8',

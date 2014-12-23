@@ -1,2 +1,2 @@
-zakupki
+prices
 =======

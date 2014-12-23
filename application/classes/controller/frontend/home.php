@@ -8,34 +8,34 @@ class Controller_Frontend_Home extends Controller_Frontend_Template
 
         $last = Cookie::get('last', 0);
 
-        $last_item = Api_Loader::load('zakupki')->get_last_by('date');
+        $last_item = Api_Loader::load('prices')->get_last_by('date');
 
         Cookie::set('last', $last_item->date);
 
         $filter = new Filter();
 
-        $order = new Order('zakupki');
+        $order = new Order('prices');
 
         $filter->add(
             'day',
-            Arr::merge(array('Все даты'), Arr::value_value(Api_Loader::load('zakupki')->get_days(10))),
+            Arr::merge(array('Все даты'), Arr::value_value(Api_Loader::load('prices')->get_days(10))),
             '=',
             Db::expr("FROM_UNIXTIME(date, '%d.%m.%Y')")
         );
 
-        $this->context['items']         = Api_Loader::load('zakupki')->order($order)->filter($filter)->get(
+        $this->context['items']         = Api_Loader::load('prices')->order($order)->filter($filter)->get(
             $this->context['pagination'], 100
         );
 
         $this->context['filter']        = $filter->get_options();
-        $this->context['new_items']     = Api_Loader::load('zakupki')->count_new($last);
+        $this->context['new_items']     = Api_Loader::load('prices')->count_new($last);
         $this->context['last_check']    = Api_Loader::load('log')->get_last_by('dt_create');
         $this->context['order']         = $order;
     }
 
     public function action_update()
     {
-        Cron_Zakupki::factory()->run();
+        Cron_Prices::factory()->run();
 
         $this->request->redirect('/');
     }
@@ -51,7 +51,7 @@ class Controller_Frontend_Home extends Controller_Frontend_Template
 
     public function action_updateindex()
     {
-        $items = Jelly::query('zakupki')->where('words_index', '=', '')->limit(10)->execute();
+        $items = Jelly::query('prices')->where('words_index', '=', '')->limit(10)->execute();
 
         foreach ($items as $item)
         {
